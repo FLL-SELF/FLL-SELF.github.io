@@ -6,17 +6,17 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-24T10:41:11.505Z</updated>
+  <updated>2017-10-03T07:48:24.288Z</updated>
   <id>http://yoursite.com/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Netflow流量分析工具的使用</title>
+    <title>Netflow下载与使用</title>
     <link href="http://yoursite.com/2017/09/24/netflow/"/>
     <id>http://yoursite.com/2017/09/24/netflow/</id>
     <published>2017-09-24T10:16:12.965Z</published>
-    <updated>2017-09-24T10:41:11.505Z</updated>
+    <updated>2017-10-03T07:48:24.288Z</updated>
     
     <content type="html"><![CDATA[<p><strong>1.Netflow介绍</strong></p><blockquote><p>&emsp;&emsp;<strong>NetFlow是一种数据交换方式，其工作原理是：NetFlow利用标准的交换模式处理数据流的第一个IP包数据，生成NetFlow 缓存，随后同样的数据基于缓存信息在同一个数据流中进行传输，不再匹配相关的访问控制等策略，NetFlow缓存同时包含了随后数据流的统计信息。</strong></p><p>&emsp;&emsp;<strong>其次我们要关注的事netflow的产生：1996年，Cisco系统公司的Darren Kerr和Barry Bruins开发了一种流量轮廓监控技术，即NetFlow。<br>作为业界事实标准，NetFlow描述了路由器输出关于被路由套接字对（the routed socket pairs）统计信息的方法。目前Cisco的绝大多数路由器集成了该特性，Juniper、Extreme以及其他厂商也有集成该特性的路由器和交换机。NetFlow是Cisco发布的一款用于分析网络数据包信息的工具包。利用Netflow技术可以监测网络上的IP流（IP flow）信息。采集到的netflow流量信息可以帮助进行网络规划，网络管理，流量计费和病毒检测等等<br>注意：netflow是cisco开发并一直升级的，所以现在的netflow在思科的路由、交换器上是应用最广又或者是只有思科的路由器有这样的功能，只有极少数的路由有并且只是sflow的功能，像juniper。但是并不是所有思科的路由、交换器都有netflow功能，版本越高的路由器功能越全面，像c7200。版本较低的可能就没有，像c3630这个版本就不能配置netflow</strong></p></blockquote><p><strong>2.下载链接</strong><br>netflow下载地址<br><a href="http://www.manageengine.com/products/netflow/download.html#more_download" target="_blank" rel="external">http://www.manageengine.com/products/netflow/download.html#more_download</a><br><strong>3.安装Netflow的重点</strong><br>&emsp;&emsp;3.1 记好默认的端口号并选择语言，如下图所示<br>&emsp;<img src="https://i.imgur.com/FopVVwm.png" alt=""><br>&emsp;&emsp;3.2 记住默认的snmp端口<br><img src="https://i.imgur.com/BmmhpE8.png" alt=""><br>&emsp;&emsp;3.3 接着一路默认安装即可<br><strong>4.配置及检测数据</strong><br>CISC交换机c2801路由器配置netflow</p><p>###1.config全局模式下配置netflow版本号</p><pre><code>(config)#ip flow-export version 5  </code></pre><p>###2.config全局模式下配置netflow服务器地址和端口号</p><pre><code>(config)#ip flow-export destination xxx.xxx.xxx.xxx 9996</code></pre><p>注意：xxx.xxx.xxx.xxx为netflow服务器地址，即运行netflow版流量监控程序主机的IP地址，9996为服务器端口号，即安装netflow是的默认端口号</p><p>###3.在Cisco系列路由器交换机每个接口上（例如interface fastethernet0/0；interface fastethernet0/1等）分别进行配置：</p><pre><code>(config-if)#ip route-cache flow</code></pre><p>###4.接着退出接口模式，进入全局模式（config）设置时区</p><pre><code>（config)#clock timezone Beijing 8</code></pre><p>   设置为北京时区</p><p>###5.enable状态下设置日期时间，最好是当下的时间</p><pre><code>#clock set hh:mm:ss day mon  year</code></pre><p>注意：</p><p>**先设置时区在设置日期时间</p><p>这是设置的netflow功能的路由器的时间，我们还需要将运行netflow程序的计算机修改成同步的时间。</p><p>###ps：</p><pre><code>show ip flow export</code></pre><p>显示当前Netflow的配置。 </p><pre><code>show ip cache flow</code></pre><p>该命令显示当前活动的流的概要，还显示设备输出了多少Netflow数据</p><p><strong>5.完成一切正确的配置之后会检测到的数据</strong></p><p>&emsp;&emsp;这款软件有一个特点，在你配置好路由上的所有命令之后，打开监控的界面，他会自动检测到配置过netflow的路由的列表，剩下的就是根据自己的需要进行一系列的筛选和分析。<br>但是，我对与很多应用用到的协议等的了解的太少，所以收集到的信息以及统计道德流量信息都是粗略的消息，并没有通过详细的过滤来了解到某一应用的检测与分析。</p>]]></content>
     
@@ -35,71 +35,11 @@
   </entry>
   
   <entry>
-    <title>woede</title>
-    <link href="http://yoursite.com/2017/09/14/woede/"/>
-    <id>http://yoursite.com/2017/09/14/woede/</id>
-    <published>2017-09-14T10:23:42.000Z</published>
-    <updated>2017-09-14T10:23:58.988Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>TEST</title>
-    <link href="http://yoursite.com/2017/09/14/test/"/>
-    <id>http://yoursite.com/2017/09/14/test/</id>
-    <published>2017-09-14T10:18:16.551Z</published>
-    <updated>2017-09-14T10:22:44.563Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>网上关于Markdown的介绍和入门指南已经很多，再写一份似乎显得多余，但对于我自己来说，写这样一份文档是对自己的Markdown掌握情况的检验，也是为推广Markdown贡献力量。<br>如有错漏之处，还请指出。</p></blockquote><p>##测试markdown。。。。</p><p>##测试标题</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;网上关于Markdown的介绍和入门指南已经很多，再写一份似乎显得多余，但对于我自己来说，写这样一份文档是对自己的Markdown掌握情况的检验，也是为推广Markdown贡献力量。&lt;br&gt;如有错漏之处，还请指出。&lt;/p&gt;
-&lt;/blockquote
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>TEST标题居中</title>
-    <link href="http://yoursite.com/2017/09/14/%E6%B5%8B%E8%AF%95-1/"/>
-    <id>http://yoursite.com/2017/09/14/测试-1/</id>
-    <published>2017-09-14T10:08:15.526Z</published>
-    <updated>2017-09-14T10:38:02.889Z</updated>
-    
-    <content type="html"><![CDATA[<p>#<center>Markdown</center></p><blockquote><p>网上关于Markdown的介绍和入门指南已经很多，再写一份似乎显得多余，但对于我自己来说，写这样一份文档是对自己的Markdown掌握情况的检验，也是为推广Markdown贡献力量。<br>如有错漏之处，还请指出。</p></blockquote><p>##测试markdown。。。。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;#&lt;center&gt;Markdown&lt;/center&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;网上关于Markdown的介绍和入门指南已经很多，再写一份似乎显得多余，但对于我自己来说，写这样一份文档是对自己的Markdown掌握情况的检验，也是为推广Markdown贡献力量
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="http://yoursite.com/2017/09/13/hello-world/"/>
     <id>http://yoursite.com/2017/09/13/hello-world/</id>
     <published>2017-09-13T07:19:43.852Z</published>
-    <updated>2017-09-13T07:19:43.852Z</updated>
+    <updated>2017-10-03T07:50:36.193Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
     
