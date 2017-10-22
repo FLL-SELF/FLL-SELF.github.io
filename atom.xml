@@ -6,10 +6,60 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-05T01:03:43.634Z</updated>
+  <updated>2017-10-22T07:28:54.804Z</updated>
   <id>http://yoursite.com/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ELK日志分析平台（2）</title>
+    <link href="http://yoursite.com/2017/10/22/ELK%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B02/"/>
+    <id>http://yoursite.com/2017/10/22/ELK日志分析平台2/</id>
+    <published>2017-10-22T03:42:10.991Z</published>
+    <updated>2017-10-22T07:28:54.804Z</updated>
+    
+    <content type="html"><![CDATA[<p>未完成</p><p>#第二部分 安装Elasticsearch5.6.3</p><blockquote><p>&emsp;&emsp;<strong>ElasticSearch一个基于Lucene的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于RESTful web接口。它是用Java开发的，是当前流行的企业级搜索引擎。设计用于云计算中，能够达到实时搜索，稳定，可靠，快速，安装使用方便。</strong></p><p><strong>官网：<a href="https://www.elastic.co/" target="_blank" rel="external">https://www.elastic.co/</a></strong></p><p>**ElasticSearch的特性：<br>开源的（不解释）</p></blockquote><p>1.它是分布式和高度可用的搜索引擎。</p><ul><li>每个索引根据配置分片的数量完成完全分片。</li><li>每个碎片都可以有一个或多个副本。</li><li>读/搜索操作可以在任何复制分片上执行。</li></ul><p> 2.支持多租户与多种类型。 </p><ul><li>支持一个以上的索引。 </li><li>支持一个以上的每个索引类型。</li><li>指数级配置(数量的碎片,索引存储,…)。</li></ul><p>3.各种组api </p><ul><li>HTTP RESTful API</li><li>本地Java API。</li><li>所有api执行自动从路由节点操作。</li></ul><p>4.面向文档的</p><p>5.可靠异步写操作长期持续。</p><p>6.(附近)实时搜索。</p><p>8.基于Lucene </p><ul><li><p>每个碎片都是一个功能齐全的Lucene索引</p></li><li><p>所有Lucene通过简单的配置/插件非常容易的暴露出来。</p></li></ul><p>9.每个操作的一致性 </p><ul><li>单文档级别操作都是原子的、一致的、孤立的和持久的。</li></ul><p><strong>对于ES了解一个大概情况就可以了。下面我们下载和安装ES（我们以<br>windows操作系统和Elasticsearch 2.3.1为例，其实在linux上安装没有区别）：</strong></p><p>首先，创建在根目录下的ELK运行目录</p><pre><code>mkdir /elk</code></pre><p>添加elk用户，赋予其对elk文件夹的权限</p><pre><code>groupadd elkuseradd -g elk elkchown -R elk:elk /elk</code></pre><p>关闭防火墙</p><pre><code>iptables -F</code></pre><h2 id="以上由root用户完成！"><a href="#以上由root用户完成！" class="headerlink" title="##以上由root用户完成！"></a>##以上由root用户完成！</h2><p>##换成elk用户进行下面的操作</p><p>1.将Elasticsearch5.6.3下载到/usr/local/elk文件下</p><pre><code>wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.3.tar.gz </code></pre><p>2.在/usr/local/下新建ELK文件夹</p><pre><code>mkdir /usr/local/ELK -p</code></pre><p>3、将安装包解压到ELK中</p><pre><code>cd toolstar zxvf  elasticsearch-5.6.3.tar.gz  -C /usr/local/ELK</code></pre><p>4、</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;未完成&lt;/p&gt;
+&lt;p&gt;#第二部分 安装Elasticsearch5.6.3&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;&lt;strong&gt;ElasticSearch一个基于Lucene的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于RESTf
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ELK日志分析平台（1）-java环境搭建</title>
+    <link href="http://yoursite.com/2017/10/22/ELK%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0/"/>
+    <id>http://yoursite.com/2017/10/22/ELK日志分析平台/</id>
+    <published>2017-10-22T03:11:47.771Z</published>
+    <updated>2017-10-22T05:41:07.070Z</updated>
+    
+    <content type="html"><![CDATA[<p>#第一部分 java环境搭建</p><p>#一、在centos 7系统安装java环境</p><p>###1.安装java1.0.8_151</p><p>进入到/usr/local/目录</p><pre><code>cd /usr/local/</code></pre><p>创建目录tools</p><pre><code>mkdir -p tools、</code></pre><p>进入到目录tools中</p><pre><code>cd tools</code></pre><p>下载java安装包</p><pre><code>wget --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie;&quot; http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.tar.gz</code></pre><p>解压缩安装包</p><pre><code>tar -xzf  jdk-8u151-linux-x64.tar.gz</code></pre><p><img src="https://i.imgur.com/P3F6iQY.png" alt=""></p><p>解压完成</p><p>返回上一级目录，并创建/usr/local/jdk目录</p><pre><code>cd ..mkdir -p jdk</code></pre><p>进入tools目录，将下载的jdk移动到jdk目录中</p><pre><code>cd ../tools/mv jdk1.8.0_151/ ../jdk/ </code></pre><p>###2、设置系统环境变量<br>打开 /etc/ 目录下的 profile 文件</p><pre><code>vi /etc/profile</code></pre><p>将如下代码追加到 profile 文件末尾：</p><pre><code> # idea - jdk8 settings start 2017-10-20JAVA_HOME=/usr/local/jdk/jdk1.8.0_151 JRE_HOME=$JAVA_HOME/jre PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin CLASSPATH=:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib/dt.jar export JAVA_HOME JRE_HOME PATH CLASSPATH# idea - jdk8 settings end - 2017-10-20</code></pre><p><img src="https://i.imgur.com/4MWSBra.png" alt=""></p><p>设置完成</p><p>启用新的配置</p><pre><code>source /etc/profile</code></pre><p><img src="https://i.imgur.com/qqCuu1X.png" alt=""></p><p>测试完成！</p><p>未完待续！—ELK日志分析平台（2）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#第一部分 java环境搭建&lt;/p&gt;
+&lt;p&gt;#一、在centos 7系统安装java环境&lt;/p&gt;
+&lt;p&gt;###1.安装java1.0.8_151&lt;/p&gt;
+&lt;p&gt;进入到/usr/local/目录&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd /usr/local/
+&lt;/code&gt;&lt;/p
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>seafile搭建</title>

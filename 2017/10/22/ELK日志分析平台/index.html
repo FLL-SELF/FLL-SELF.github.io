@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        FLL-SELF&#39;s Studio
+        ELK日志分析平台（1）-java环境搭建 · FLL-SELF&#39;s Studio
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -68,11 +68,22 @@
     
 </head>
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >FLL-SELF&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">ELK日志分析平台（1）-java环境搭建</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>FLL-SELF's Studio.</a>
 </header>
@@ -80,32 +91,102 @@
         <div class="site-intro">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            ELK日志分析平台（1）-java环境搭建
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+        </p>
+        <!-- 404 -->
+        
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2017/10/22</span>
+            </div>
         
     </div>
 </div>
         <div class="container">
             <main class="main post-page">
     <article class="article-entry">
-        <p>layout: 404<br>title: “[404]”<br>description: “May the Force be with you :&#41;”</p>
+        <p>#第一部分 java环境搭建</p>
+<p>#一、在centos 7系统安装java环境</p>
+<p>###1.安装java1.0.8_151</p>
+<p>进入到/usr/local/目录</p>
+<pre><code>cd /usr/local/
+</code></pre><p>创建目录tools</p>
+<pre><code>mkdir -p tools、
+</code></pre><p>进入到目录tools中</p>
+<pre><code>cd tools
+</code></pre><p>下载java安装包</p>
+<pre><code>wget --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie;&quot; http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.tar.gz
+</code></pre><p>解压缩安装包</p>
+<pre><code>tar -xzf  jdk-8u151-linux-x64.tar.gz
+</code></pre><p><img src="https://i.imgur.com/P3F6iQY.png" alt=""></p>
+<p>解压完成</p>
+<p>返回上一级目录，并创建/usr/local/jdk目录</p>
+<pre><code>cd ..
+mkdir -p jdk
+</code></pre><p>进入tools目录，将下载的jdk移动到jdk目录中</p>
+<pre><code>cd ../tools/
+mv jdk1.8.0_151/ ../jdk/ 
+</code></pre><p>###2、设置系统环境变量<br>打开 /etc/ 目录下的 profile 文件</p>
+<pre><code>vi /etc/profile
+</code></pre><p>将如下代码追加到 profile 文件末尾：</p>
+<pre><code> # idea - jdk8 settings start 2017-10-20
+
+JAVA_HOME=/usr/local/jdk/jdk1.8.0_151
+ JRE_HOME=$JAVA_HOME/jre
+ PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+ CLASSPATH=:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib/dt.jar
+ export JAVA_HOME JRE_HOME PATH CLASSPATH
+
+# idea - jdk8 settings end - 2017-10-20
+</code></pre><p><img src="https://i.imgur.com/4MWSBra.png" alt=""></p>
+<p>设置完成</p>
+<p>启用新的配置</p>
+<pre><code>source /etc/profile
+</code></pre><p><img src="https://i.imgur.com/qqCuu1X.png" alt=""></p>
+<p>测试完成！</p>
+<p>未完待续！—ELK日志分析平台（2）</p>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
+            <li class="next">
+                <a href= "/2017/10/22/ELK日志分析平台2/" title= ELK日志分析平台（2） >
+                    <span>Next Post</span>
+                    <span>ELK日志分析平台（2）</span>
+                </a>
+            </li>
+        
+        
+            <li class="previous">
+                <a href= "/2017/10/04/seafile搭建/" title= seafile搭建 >
+                    <span>Previous Post</span>
+                    <span>seafile搭建</span>
+                </a>
+            </li>
         
     </ul>
     <!-- 来必力City版安装代码 -->
