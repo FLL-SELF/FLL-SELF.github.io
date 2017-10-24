@@ -103,10 +103,69 @@
     
     
         <article class="index-post">
+            <a class="content-show-full" href = "/2017/10/23/ELK日志分析平台(4)/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>ELK日志分析平台(4)-kibana安装与测试</span>
+                    </h2>
+                <div class="abstract-content">
+                    1、下载安装包至/tools目录
+wget https://artifacts.elastic.co/downloads/kibana/kibana-5.6.3-linux-x86_64.tar.gz
+2、解压至/elk目录
+tar -zxvf kibana-5.6.3-linux-x86_64.tar.gz -C /elk
+
+3、修改配置文件
+vi 
+
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/10/23</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2017/10/23/ELK日志分析平台（3）/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>ELK日志分析平台（3）-logstash安装测试</span>
+                    </h2>
+                <div class="abstract-content">
+                    1、下载至根目录/tools安装包
+wget https://artifacts.elastic.co/downloads/logstash/logstash-5.6.3.tar.gz
+2、解压至根目录下的elk文件夹
+tar -zxvf logstash-5.6.3.tar.gz -C /elk
+3、进入logstash文件夹
+cd logstash-5.6.3
+4、测试logstash
+启动一个logstash,-e：在命令行执行；input输入，stdin标准输入，是一个插件；output输出，stdout：标准输出
+./bin/logstash -e &apos;input { ...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/10/23</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="content-show-full" href = "/2017/10/22/ELK日志分析平台2/" >
                     <h2 class="abstract-title">
                         
-                        <span>ELK日志分析平台（2）</span>
+                        <span>ELK日志分析平台（2）-elasticsearch安装与测试</span>
                     </h2>
                 <div class="abstract-content">
                     未完成
@@ -298,19 +357,70 @@ tar -xzf sea...
     
     
     
-    <div class="total-archive"> Total : 5 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 7 </div>
     
     <div class="post-archive">
     
     
     
     
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/23</span><a class="archive-post-title" href= "/2017/10/23/ELK日志分析平台（3）/" >ELK日志分析平台（3）-logstash安装测试</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/23</span><a class="archive-post-title" href= "/2017/10/23/ELK日志分析平台(4)/" >ELK日志分析平台(4)-kibana安装与测试</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> Invalid date </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/10/22/ELK日志分析平台2/" >ELK日志分析平台（2）</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/10/22/ELK日志分析平台2/" >ELK日志分析平台（2）-elasticsearch安装与测试</a>
         </li>
     
     
