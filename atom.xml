@@ -61,9 +61,9 @@
     <link href="http://yoursite.com/2017/10/23/ELK%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0(4)/"/>
     <id>http://yoursite.com/2017/10/23/ELK日志分析平台(4)/</id>
     <published>2017-10-23T14:33:26.242Z</published>
-    <updated>2017-10-23T14:33:26.243Z</updated>
+    <updated>2017-10-29T09:27:09.364Z</updated>
     
-    <content type="html"><![CDATA[<p>1、下载安装包至/tools目录</p><pre><code>wget https://artifacts.elastic.co/downloads/kibana/kibana-5.6.3-linux-x86_64.tar.gz</code></pre><p>2、解压至/elk目录</p><pre><code>tar -zxvf kibana-5.6.3-linux-x86_64.tar.gz -C /elk</code></pre><p><img src="https://i.imgur.com/dkHW1ce.png" alt=""></p><p>3、修改配置文件</p><pre><code>vi </code></pre>]]></content>
+    <content type="html"><![CDATA[<p>1、下载安装包至/tools目录</p><pre><code>wget https://artifacts.elastic.co/downloads/kibana/kibana-5.6.3-linux-x86_64.tar.gz</code></pre><p>2、解压至/elk目录</p><pre><code>tar -zxvf kibana-5.6.3-linux-x86_64.tar.gz -C /elk</code></pre><p><img src="https://i.imgur.com/dkHW1ce.png" alt=""></p>]]></content>
     
     <summary type="html">
     
