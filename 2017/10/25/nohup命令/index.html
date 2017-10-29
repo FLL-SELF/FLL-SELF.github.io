@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        ELK日志分析平台（3）-logstash安装测试 · FLL-SELF&#39;s Studio
+        nohup 命令的简单使用 · FLL-SELF&#39;s Studio
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -81,7 +81,7 @@
                 <a href="/" >FLL-SELF&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">ELK日志分析平台（3）-logstash安装测试</a>
+                <a href="#" class="post-name">nohup 命令的简单使用</a>
             </div>
     </div>
     
@@ -102,7 +102,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            ELK日志分析平台（3）-logstash安装测试
+            nohup 命令的简单使用
             <!-- 404 -->
             
         </h1>
@@ -120,7 +120,7 @@
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2017/10/23</span>
+                <span class="post-intro-time">2017/10/25</span>
             </div>
         
     </div>
@@ -128,34 +128,30 @@
         <div class="container">
             <main class="main post-page">
     <article class="article-entry">
-        <p>1、下载至根目录/tools安装包</p>
-<pre><code>wget https://artifacts.elastic.co/downloads/logstash/logstash-5.6.3.tar.gz
-</code></pre><p>2、解压至根目录下的elk文件夹</p>
-<pre><code>tar -zxvf logstash-5.6.3.tar.gz -C /elk
-</code></pre><p>3、进入logstash文件夹</p>
-<pre><code>cd logstash-5.6.3
-</code></pre><p>4、测试logstash</p>
-<p>启动一个logstash,-e：在命令行执行；input输入，stdin标准输入，是一个插件；output输出，stdout：标准输出</p>
-<pre><code>./bin/logstash -e &apos;input { stdin{} } output { stdout{codec=&gt;rubydebug} }&apos;
-</code></pre><p><img src="https://i.imgur.com/LpmBX9N.png" alt=""></p>
-<p>其中 hello 为手动输入</p>
+        <blockquote>
+<p>最近在搭建ELK平台，kibana是用tar包直接解压缩使用的方式安装的。但是安装完成后遇到一个问题就是如何让kibana后台运行，并且当断开ssh连接后，还能继续运行。后来在网上大神的博客中学到了nohup命令。</p>
+</blockquote>
+<p>我将这个命令用于后台启动elasticsearch的head插件后台运行，因为前台运行head插件和elasticsearch应用会占用当前的命令行窗口。</p>
+<pre><code>nohup grunt server &amp;exit
+</code></pre><p><img src="https://i.imgur.com/TVBbt8v.jpg" alt=""></p>
+<p>博客来源：<a href="http://blog.csdn.net/asia_kobe/article/details/53304447" target="_blank" rel="external">后台运行命令</a></p>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
             <li class="next">
-                <a href= "/2017/10/23/ELK日志分析平台(4)/" title= ELK日志分析平台(4)-kibana安装与测试 >
+                <a href= "/2017/10/26/ELK日志分析平台简介/" title= ELK日志分析平台简介 >
                     <span>Next Post</span>
-                    <span>ELK日志分析平台(4)-kibana安装与测试</span>
+                    <span>ELK日志分析平台简介</span>
                 </a>
             </li>
         
         
             <li class="previous">
-                <a href= "/2017/10/22/ELK日志分析平台2/" title= ELK日志分析平台（2）-elasticsearch安装与测试 >
+                <a href= "/2017/10/23/ELK日志分析平台(4)/" title= ELK日志分析平台(4)-kibana安装与测试 >
                     <span>Previous Post</span>
-                    <span>ELK日志分析平台（2）-elasticsearch安装与测试</span>
+                    <span>ELK日志分析平台(4)-kibana安装与测试</span>
                 </a>
             </li>
         

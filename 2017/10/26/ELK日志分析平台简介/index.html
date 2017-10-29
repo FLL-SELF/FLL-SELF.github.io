@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        ELK日志分析平台（3）-logstash安装测试 · FLL-SELF&#39;s Studio
+        ELK日志分析平台简介 · FLL-SELF&#39;s Studio
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -81,7 +81,7 @@
                 <a href="/" >FLL-SELF&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">ELK日志分析平台（3）-logstash安装测试</a>
+                <a href="#" class="post-name">ELK日志分析平台简介</a>
             </div>
     </div>
     
@@ -102,7 +102,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            ELK日志分析平台（3）-logstash安装测试
+            ELK日志分析平台简介
             <!-- 404 -->
             
         </h1>
@@ -120,7 +120,7 @@
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2017/10/23</span>
+                <span class="post-intro-time">2017/10/26</span>
             </div>
         
     </div>
@@ -128,34 +128,26 @@
         <div class="container">
             <main class="main post-page">
     <article class="article-entry">
-        <p>1、下载至根目录/tools安装包</p>
-<pre><code>wget https://artifacts.elastic.co/downloads/logstash/logstash-5.6.3.tar.gz
-</code></pre><p>2、解压至根目录下的elk文件夹</p>
-<pre><code>tar -zxvf logstash-5.6.3.tar.gz -C /elk
-</code></pre><p>3、进入logstash文件夹</p>
-<pre><code>cd logstash-5.6.3
-</code></pre><p>4、测试logstash</p>
-<p>启动一个logstash,-e：在命令行执行；input输入，stdin标准输入，是一个插件；output输出，stdout：标准输出</p>
-<pre><code>./bin/logstash -e &apos;input { stdin{} } output { stdout{codec=&gt;rubydebug} }&apos;
-</code></pre><p><img src="https://i.imgur.com/LpmBX9N.png" alt=""></p>
-<p>其中 hello 为手动输入</p>
+        <p>#ELK多种架构及优劣</p>
+<p>ELK多种架构及优劣:<a href="http://blog.csdn.net/wenlixing110/article/details/56277603" target="_blank" rel="external">http://blog.csdn.net/wenlixing110/article/details/56277603</a></p>
+<ol>
+<li>需要给代码的用户一份Apache Licence</li>
+<li>如果你修改了代码，需要在被修改的文件中说明。</li>
+<li>在延伸的代码中（修改和有源代码衍生的代码中）需要带有原来代码中的协议，商标，专利声明和其他原来作者规定需要包含的说明。</li>
+<li>如果再发布的产品中包含一个Notice文件，则在Notice文件中需要带有Apache Licence。你可以在Notice中增加自己的许可，但不可以表现为对Apache Licence构成更改。</li>
+<li>Apache Licence也是对商业应用友好的许可。使用者也可以在需要的时候修改代码来满足需要并作为开源或商业产品发布/销售</li>
+</ol>
+<p>Apache License 2.0：<a href="http://blog.csdn.net/renminzdb/article/details/42422007" target="_blank" rel="external">http://blog.csdn.net/renminzdb/article/details/42422007</a></p>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="next">
-                <a href= "/2017/10/23/ELK日志分析平台(4)/" title= ELK日志分析平台(4)-kibana安装与测试 >
-                    <span>Next Post</span>
-                    <span>ELK日志分析平台(4)-kibana安装与测试</span>
-                </a>
-            </li>
-        
         
             <li class="previous">
-                <a href= "/2017/10/22/ELK日志分析平台2/" title= ELK日志分析平台（2）-elasticsearch安装与测试 >
+                <a href= "/2017/10/25/nohup命令/" title= nohup 命令的简单使用 >
                     <span>Previous Post</span>
-                    <span>ELK日志分析平台（2）-elasticsearch安装与测试</span>
+                    <span>nohup 命令的简单使用</span>
                 </a>
             </li>
         

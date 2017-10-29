@@ -259,6 +259,7 @@ elk    hard    nofile          65536
 <p>②执行kill 找到的进程id。</p>
 <hr>
 <p>#安装elasticsearch-head插件</p>
+<p><strong>head插件，用于查看集群相关信息</strong></p>
 <p>1、在/elk下，执行</p>
 <pre><code>git clone git://github.com/mobz/elasticsearch-head.git
 cd elasticsearch-head
@@ -322,6 +323,15 @@ server: {
 <pre><code>grunt server
 </code></pre><p>访问:target:9100</p>
 <p>这个时候，访问<a href="http://xxx:9100就可以访问head插件了" target="_blank" rel="external">http://xxx:9100就可以访问head插件了</a>.</p>
+<p>为了方便可以后台启动head</p>
+<pre><code>nohup grunt server &amp;exit
+</code></pre><p>如果想关闭head插件，使用linux查找进程命令</p>
+<pre><code>ps aux|grep head
+</code></pre><p>结束进程：</p>
+<pre><code>kill 进程号
+</code></pre><hr>
+<p><strong>经过上述操作检查无误后，可以将此机器上的elasticsearch分发到其它机器上，记得分发后修改各自的node.name以及network.host两个属性。网上很多关于Elasticsearch的安装中都说道，保持每台机器上的cluster.name属性一致时，如果将各自的es服务都启动，系统会自动将同一局域网的同一网段上的elasticsearch自动发现，并依照cluster name相同的机器组成一个集群。</strong></p>
+<p><strong>如果没有自动发现，可以将分别修改每台机器上的机器上的elasticsearch.yml文件，在其中加入discovery.zen.ping.unicast.hosts: [“m000”, “m001”, “m002”]和discovery.zen.minimum_master_nodes: 2参数后，将m000-003上的elasticsearch服务启动才能组成一个集群。</strong></p>
 
     </article>
     <!-- 前后页  -->
@@ -479,38 +489,51 @@ server: {
     
     
     
-    <div class="total-archive"> Total : 7 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 9 </div>
     
     <div class="post-archive">
     
     
     
     
-    <div class="archive-year"> 2017 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/23</span><a class="archive-post-title" href= "/2017/10/23/ELK日志分析平台（3）/" >ELK日志分析平台（3）-logstash安装测试</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/23</span><a class="archive-post-title" href= "/2017/10/23/ELK日志分析平台(4)/" >ELK日志分析平台(4)-kibana安装与测试</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
     <div class="archive-year"> Invalid date </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/10/22/ELK日志分析平台2/" >ELK日志分析平台（2）-elasticsearch安装与测试</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/09/13/hello-world/" >Hello World</a>
         </li>
     
     
@@ -533,12 +556,26 @@ server: {
     
         </ul>
     
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/10/22/ELK日志分析平台2/" >ELK日志分析平台（2）-elasticsearch安装与测试</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2017 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/04</span><a class="archive-post-title" href= "/2017/10/04/seafile搭建/" >seafile搭建</a>
+            <span class="archive-post-date">10/26</span><a class="archive-post-title" href= "/2017/10/26/ELK日志分析平台简介/" >ELK日志分析平台简介</a>
         </li>
     
     
@@ -552,7 +589,21 @@ server: {
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/09/13/hello-world/" >Hello World</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/10/25/nohup命令/" >nohup 命令的简单使用</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/23</span><a class="archive-post-title" href= "/2017/10/23/ELK日志分析平台（3）/" >ELK日志分析平台（3）-logstash安装测试</a>
         </li>
     
     
@@ -567,6 +618,25 @@ server: {
     
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/10/22/ELK日志分析平台/" >ELK日志分析平台（1）-java环境搭建</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/23</span><a class="archive-post-title" href= "/2017/10/23/ELK日志分析平台(4)/" >ELK日志分析平台(4)-kibana安装与测试</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/04</span><a class="archive-post-title" href= "/2017/10/04/seafile搭建/" >seafile搭建</a>
         </li>
     
     </div>
