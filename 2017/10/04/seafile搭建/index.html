@@ -129,7 +129,7 @@
             <main class="main post-page">
     <article class="article-entry">
         <p>#部署seafile服务器</p>
-<p>###来源：<a href="http://manual-cn.seafile.com/deploy/using_mysql.html" target="_blank" rel="external">seafile服务器中文操作手册</a></p>
+<p>###来源：<a href="http://manual-cn.seafile.com/deploy/using_mysql.html" target="_blank" rel="noopener">seafile服务器中文操作手册</a></p>
 <p>#一、下载seafile的服务器端文件并安装</p>
 <p>####1.1 在命令行下输入</p>
 <pre><code>wget http://seafile-downloads.oss-cn-shanghai.aliyuncs.com/seafile-server_6.2.2_x86-64.tar.gz &lt;目录&gt;
@@ -176,7 +176,7 @@ yum -y install epel-release
 rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 yum -y install python-imaging MySQL-python python-memcached python-ldap python-urllib3 ffmpeg ffmpeg-devel 
 pip install pillow moviepy
-</code></pre><p>在安装pip时会出现问题，解决方法如下：<br><a href="http://blog.csdn.net/yulei_qq/article/details/52984334" target="_blank" rel="external">CentOS7下安装python-pip</a></p>
+</code></pre><p>在安装pip时会出现问题，解决方法如下：<br><a href="http://blog.csdn.net/yulei_qq/article/details/52984334" target="_blank" rel="noopener">CentOS7下安装python-pip</a></p>
 <p>####1.5 在安装seafile前先安装Mariadb-server<br>   安装命令</p>
 <pre><code>yum -y install mariadb mariadb-server
 </code></pre><p> <img src="https://i.imgur.com/UT01fOX.jpg" alt=""></p>
@@ -326,7 +326,7 @@ haiwen
 <pre><code>./seahub.sh stop # 停止 Seafile 进程
 ./seafile.sh stop # 停止 Seahub
 </code></pre><p>更改haiwen/conf/ccnet.conf文件中SERVICE_URL 的值(假设你的 ip 或者域名时192.168.1.100), 如下 (从 5.0 版本开始，可以直接在管理员界面中设置。注意，如果同时在 Web 界面和配置文件中设置了这个值，以 Web 界面的配置为准。):</p>
-<p>SERVICE_URL = <a href="http://192.168.1.100:8001" target="_blank" rel="external">http://192.168.1.100:8001</a></p>
+<p>SERVICE_URL = <a href="http://192.168.1.100:8001" target="_blank" rel="noopener">http://192.168.1.100:8001</a></p>
 <p>重启 Seafile 服务器</p>
 <pre><code>./seafile.sh start # 启动 Seafile 服务
 ./seahub.sh start 8001 # 启动 Seahub 网站 （运行在8001端口上）
@@ -346,7 +346,7 @@ pgrep -f &quot;seahub&quot; # 查看 Seahub 进程
 pkill -f seafile-controller # 结束 Seafile 进程
 pkill -f &quot;seahub&quot; # 结束 Seafile 进程
 </code></pre><p>#OK!</p>
-<p>文章有引用：<a href="http://www.linuxidc.com/Linux/2016-03/128880.htm" target="_blank" rel="external">Linux社区</a></p>
+<p>文章有引用：<a href="http://www.linuxidc.com/Linux/2016-03/128880.htm" target="_blank" rel="noopener">Linux社区</a></p>
 
     </article>
     <!-- 前后页  -->
@@ -536,19 +536,49 @@ pkill -f &quot;seahub&quot; # 结束 Seafile 进程
     
     
     
-    <div class="total-archive"> Total : 9 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 11 </div>
     
     <div class="post-archive">
     
     
     
     
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/26</span><a class="archive-post-title" href= "/2017/10/26/ELK日志分析平台简介/" >ELK日志分析平台简介</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> Invalid date </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/09/13/hello-world/" >Hello World</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/10/22/ELK日志分析平台2/" >ELK日志分析平台（2）-elasticsearch安装与测试</a>
         </li>
     
     
@@ -576,21 +606,7 @@ pkill -f &quot;seahub&quot; # 结束 Seafile 进程
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/10/22/ELK日志分析平台2/" >ELK日志分析平台（2）-elasticsearch安装与测试</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2017 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/26</span><a class="archive-post-title" href= "/2017/10/26/ELK日志分析平台简介/" >ELK日志分析平台简介</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/10/25/nohup命令/" >nohup 命令的简单使用</a>
         </li>
     
     
@@ -604,7 +620,35 @@ pkill -f &quot;seahub&quot; # 结束 Seafile 进程
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/10/25/nohup命令/" >nohup 命令的简单使用</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/09/13/hello-world/" >Hello World</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/03/20/test/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/20</span><a class="archive-post-title" href= "/2018/03/20/test/" >[Untitled Post]</a>
         </li>
     
     
@@ -622,6 +666,16 @@ pkill -f &quot;seahub&quot; # 结束 Seafile 进程
         </li>
     
     
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/23</span><a class="archive-post-title" href= "/2017/10/23/ELK日志分析平台(4)/" >ELK日志分析平台(4)-kibana安装与测试</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/04</span><a class="archive-post-title" href= "/2017/10/04/seafile搭建/" >seafile搭建</a>
+        </li>
+    
+    
     
     
     
@@ -633,25 +687,6 @@ pkill -f &quot;seahub&quot; # 结束 Seafile 进程
     
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2017/10/22/ELK日志分析平台/" >ELK日志分析平台（1）-java环境搭建</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2017 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/23</span><a class="archive-post-title" href= "/2017/10/23/ELK日志分析平台(4)/" >ELK日志分析平台(4)-kibana安装与测试</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/04</span><a class="archive-post-title" href= "/2017/10/04/seafile搭建/" >seafile搭建</a>
         </li>
     
     </div>
