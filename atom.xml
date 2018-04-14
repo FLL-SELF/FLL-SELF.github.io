@@ -9,6 +9,11 @@
   <updated>2017-10-26T08:33:06.003Z</updated>
   <id>http://yoursite.com/</id>
   
+  <author>
+    <name>FLL</name>
+    
+  </author>
+  
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
