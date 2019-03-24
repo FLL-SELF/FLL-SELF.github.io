@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Netflow下载与使用 | Free Time</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -14,6 +14,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/09/24/netflow/index.html">
 <meta property="og:site_name" content="Free Time">
 <meta property="og:description" content="1.Netflow介绍  &amp;emsp;&amp;emsp;NetFlow是一种数据交换方式，其工作原理是：NetFlow利用标准的交换模式处理数据流的第一个IP包数据，生成NetFlow 缓存，随后同样的数据基于缓存信息在同一个数据流中进行传输，不再匹配相关的访问控制等策略，NetFlow缓存同时包含了随后数据流的统计信息。 &amp;emsp;&amp;emsp;其次我们要关注的事netflow的产生：1996年，Ci">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.imgur.com/FopVVwm.png">
 <meta property="og:image" content="https://i.imgur.com/BmmhpE8.png">
 <meta property="og:updated_time" content="2017-10-03T07:48:24.288Z">
@@ -39,7 +40,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -49,11 +50,13 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="https://s1.ax1x.com/2018/04/14/CZJVOJ.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">FLL</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">不善言辞</p>
 		
 
 		<nav class="header-menu">
@@ -107,11 +110,13 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="https://s1.ax1x.com/2018/04/14/CZJVOJ.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">FLL</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>不善言辞<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -181,7 +186,7 @@
 <p>&emsp;&emsp;<strong>NetFlow是一种数据交换方式，其工作原理是：NetFlow利用标准的交换模式处理数据流的第一个IP包数据，生成NetFlow 缓存，随后同样的数据基于缓存信息在同一个数据流中进行传输，不再匹配相关的访问控制等策略，NetFlow缓存同时包含了随后数据流的统计信息。</strong></p>
 <p>&emsp;&emsp;<strong>其次我们要关注的事netflow的产生：1996年，Cisco系统公司的Darren Kerr和Barry Bruins开发了一种流量轮廓监控技术，即NetFlow。<br>作为业界事实标准，NetFlow描述了路由器输出关于被路由套接字对（the routed socket pairs）统计信息的方法。目前Cisco的绝大多数路由器集成了该特性，Juniper、Extreme以及其他厂商也有集成该特性的路由器和交换机。NetFlow是Cisco发布的一款用于分析网络数据包信息的工具包。利用Netflow技术可以监测网络上的IP流（IP flow）信息。采集到的netflow流量信息可以帮助进行网络规划，网络管理，流量计费和病毒检测等等<br>注意：netflow是cisco开发并一直升级的，所以现在的netflow在思科的路由、交换器上是应用最广又或者是只有思科的路由器有这样的功能，只有极少数的路由有并且只是sflow的功能，像juniper。但是并不是所有思科的路由、交换器都有netflow功能，版本越高的路由器功能越全面，像c7200。版本较低的可能就没有，像c3630这个版本就不能配置netflow</strong></p>
 </blockquote>
-<p><strong>2.下载链接</strong><br>netflow下载地址<br><a href="http://www.manageengine.com/products/netflow/download.html#more_download" target="_blank" rel="noopener">http://www.manageengine.com/products/netflow/download.html#more_download</a><br><strong>3.安装Netflow的重点</strong><br>&emsp;&emsp;3.1 记好默认的端口号并选择语言，如下图所示<br>&emsp;<img src="https://i.imgur.com/FopVVwm.png" alt=""><br>&emsp;&emsp;3.2 记住默认的snmp端口<br><img src="https://i.imgur.com/BmmhpE8.png" alt=""><br>&emsp;&emsp;3.3 接着一路默认安装即可<br><strong>4.配置及检测数据</strong><br>CISC交换机c2801路由器配置netflow</p>
+<p><strong>2.下载链接</strong><br>netflow下载地址<br><a href="http://www.manageengine.com/products/netflow/download.html#more_download" target="_blank" rel="noopener">http://www.manageengine.com/products/netflow/download.html#more_download</a><br><strong>3.安装Netflow的重点</strong><br>&emsp;&emsp;3.1 记好默认的端口号并选择语言，如下图所示<br>&emsp;<img src="https://i.imgur.com/FopVVwm.png" alt><br>&emsp;&emsp;3.2 记住默认的snmp端口<br><img src="https://i.imgur.com/BmmhpE8.png" alt><br>&emsp;&emsp;3.3 接着一路默认安装即可<br><strong>4.配置及检测数据</strong><br>CISC交换机c2801路由器配置netflow</p>
 <p>###1.config全局模式下配置netflow版本号</p>
 <pre><code>(config)#ip flow-export version 5  
 </code></pre><p>###2.config全局模式下配置netflow服务器地址和端口号</p>
@@ -346,7 +351,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 FLL
+    		&copy; 2019 FLL
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -433,7 +438,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

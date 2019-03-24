@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Free Time</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -12,6 +12,7 @@
 <meta property="og:title" content="Free Time">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Free Time">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Free Time">
   
@@ -32,7 +33,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -42,11 +43,13 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="https://s1.ax1x.com/2018/04/14/CZJVOJ.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">FLL</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">不善言辞</p>
 		
 
 		<nav class="header-menu">
@@ -100,11 +103,13 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="https://s1.ax1x.com/2018/04/14/CZJVOJ.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">FLL</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>不善言辞<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -151,36 +156,66 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-ELK日志分析平台简介" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-ELK日志分析平台" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/26/ELK日志分析平台简介/">ELK日志分析平台简介</a>
+      <a class="article-title" href="/2019/03/24/ELK日志分析平台/">ELK日志分析平台（1）-java环境搭建</a>
     </h1>
   
 
         
-        <a href="/2017/10/26/ELK日志分析平台简介/" class="archive-article-date">
-  	<time datetime="2017-10-26T08:30:20.353Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-26</time>
+        <a href="/2019/03/24/ELK日志分析平台/" class="archive-article-date">
+  	<time datetime="2019-03-24T03:00:12.494Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#ELK多种架构及优劣</p>
-<p>ELK多种架构及优劣:<a href="http://blog.csdn.net/wenlixing110/article/details/56277603" target="_blank" rel="noopener">http://blog.csdn.net/wenlixing110/article/details/56277603</a></p>
-<ol>
-<li>需要给代码的用户一份Apache Licence</li>
-<li>如果你修改了代码，需要在被修改的文件中说明。</li>
-<li>在延伸的代码中（修改和有源代码衍生的代码中）需要带有原来代码中的协议，商标，专利声明和其他原来作者规定需要包含的说明。</li>
-<li>如果再发布的产品中包含一个Notice文件，则在Notice文件中需要带有Apache Licence。你可以在Notice中增加自己的许可，但不可以表现为对Apache Licence构成更改。</li>
-<li>Apache Licence也是对商业应用友好的许可。使用者也可以在需要的时候修改代码来满足需要并作为开源或商业产品发布/销售</li>
-</ol>
-<p>Apache License 2.0：<a href="http://blog.csdn.net/renminzdb/article/details/42422007" target="_blank" rel="noopener">http://blog.csdn.net/renminzdb/article/details/42422007</a></p>
+        <p>#第一部分 java环境搭建</p>
+<p>#一、在centos 7系统安装java环境</p>
+<p>###1.安装java1.0.8_151</p>
+<p>进入到/usr/local/目录</p>
+<pre><code>cd /usr/local/
+</code></pre><p>创建目录tools</p>
+<pre><code>mkdir -p tools、
+</code></pre><p>进入到目录tools中</p>
+<pre><code>cd tools
+</code></pre><p>下载java安装包</p>
+<pre><code>wget --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie;&quot; http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.tar.gz
+</code></pre><p>解压缩安装包</p>
+<pre><code>tar -xzf  jdk-8u151-linux-x64.tar.gz
+</code></pre><p><img src="https://i.imgur.com/P3F6iQY.png" alt></p>
+<p>解压完成</p>
+<p>返回上一级目录，并创建/usr/local/jdk目录</p>
+<pre><code>cd ..
+mkdir -p jdk
+</code></pre><p>进入tools目录，将下载的jdk移动到jdk目录中</p>
+<pre><code>cd ../tools/
+mv jdk1.8.0_151/ ../jdk/ 
+</code></pre><p>###2、设置系统环境变量<br>打开 /etc/ 目录下的 profile 文件</p>
+<pre><code>vi /etc/profile
+</code></pre><p>将如下代码追加到 profile 文件末尾：</p>
+<pre><code> # idea - jdk8 settings start 2017-10-20
+
+JAVA_HOME=/usr/local/jdk/jdk1.8.0_151
+ JRE_HOME=$JAVA_HOME/jre
+ PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+ CLASSPATH=:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib/dt.jar
+ export JAVA_HOME JRE_HOME PATH CLASSPATH
+
+# idea - jdk8 settings end - 2017-10-20
+</code></pre><p><img src="https://i.imgur.com/4MWSBra.png" alt></p>
+<p>设置完成</p>
+<p>启用新的配置</p>
+<pre><code>source /etc/profile
+</code></pre><p><img src="https://i.imgur.com/qqCuu1X.png" alt></p>
+<p>测试完成！</p>
+<p>未完待续！—ELK日志分析平台（2）</p>
 
       
 
@@ -193,216 +228,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/26/ELK日志分析平台简介/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-nohup命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/25/nohup命令/">nohup 命令的简单使用</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/25/nohup命令/" class="archive-article-date">
-  	<time datetime="2017-10-25T11:14:45.664Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>最近在搭建ELK平台，kibana是用tar包直接解压缩使用的方式安装的。但是安装完成后遇到一个问题就是如何让kibana后台运行，并且当断开ssh连接后，还能继续运行。后来在网上大神的博客中学到了nohup命令。</p>
-</blockquote>
-<p>我将这个命令用于后台启动elasticsearch的head插件后台运行，因为前台运行head插件和elasticsearch应用会占用当前的命令行窗口。</p>
-<pre><code>nohup grunt server &amp;exit
-</code></pre><p><img src="https://i.imgur.com/TVBbt8v.jpg" alt=""></p>
-<p>博客来源：<a href="http://blog.csdn.net/asia_kobe/article/details/53304447" target="_blank" rel="noopener">后台运行命令</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/25/nohup命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ELK日志分析平台(4)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/23/ELK日志分析平台(4)/">ELK日志分析平台(4)-kibana安装与测试</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/23/ELK日志分析平台(4)/" class="archive-article-date">
-  	<time datetime="2017-10-23T14:33:26.243Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、下载安装包至/tools目录</p>
-<pre><code>wget https://artifacts.elastic.co/downloads/kibana/kibana-5.6.3-linux-x86_64.tar.gz
-</code></pre><p>2、解压至/elk目录</p>
-<pre><code>tar -zxvf kibana-5.6.3-linux-x86_64.tar.gz -C /elk
-</code></pre><p><img src="https://i.imgur.com/dkHW1ce.png" alt=""></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/23/ELK日志分析平台(4)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ELK日志分析平台（3）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/23/ELK日志分析平台（3）/">ELK日志分析平台（3）-logstash安装测试</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/23/ELK日志分析平台（3）/" class="archive-article-date">
-  	<time datetime="2017-10-23T14:26:20.345Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、下载至根目录/tools安装包</p>
-<pre><code>wget https://artifacts.elastic.co/downloads/logstash/logstash-5.6.3.tar.gz
-</code></pre><p>2、解压至根目录下的elk文件夹</p>
-<pre><code>tar -zxvf logstash-5.6.3.tar.gz -C /elk
-</code></pre><p>3、进入logstash文件夹</p>
-<pre><code>cd logstash-5.6.3
-</code></pre><p>4、测试logstash</p>
-<p>启动一个logstash,-e：在命令行执行；input输入，stdin标准输入，是一个插件；output输出，stdout：标准输出</p>
-<pre><code>./bin/logstash -e &apos;input { stdin{} } output { stdout{codec=&gt;rubydebug} }&apos;
-</code></pre><p><img src="https://i.imgur.com/LpmBX9N.png" alt=""></p>
-<p>其中 hello 为手动输入</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/23/ELK日志分析平台（3）/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/03/24/ELK日志分析平台/">展开全文 >></a>
         </p>
       
 
@@ -439,13 +265,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/22/ELK日志分析平台2/">ELK日志分析平台（2）-elasticsearch安装与测试</a>
+      <a class="article-title" href="/2019/03/24/ELK日志分析平台2/">ELK日志分析平台（2）-elasticsearch安装与测试</a>
     </h1>
   
 
         
-        <a href="/2017/10/22/ELK日志分析平台2/" class="archive-article-date">
-  	<time datetime="2017-10-22T03:42:10.992Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-22</time>
+        <a href="/2019/03/24/ELK日志分析平台2/" class="archive-article-date">
+  	<time datetime="2019-03-24T03:00:12.494Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
 </a>
         
       </header>
@@ -456,7 +282,11 @@
 <p>#第二部分 安装Elasticsearch5.6.3</p>
 <blockquote>
 <p>&emsp;&emsp;<strong>ElasticSearch一个基于Lucene的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于RESTful web接口。它是用Java开发的，是当前流行的企业级搜索引擎。设计用于云计算中，能够达到实时搜索，稳定，可靠，快速，安装使用方便。</strong></p>
+</blockquote>
+<blockquote>
 <p><strong>官网：<a href="https://www.elastic.co/" target="_blank" rel="noopener">https://www.elastic.co/</a></strong></p>
+</blockquote>
+<blockquote>
 <p>**ElasticSearch的特性：<br>开源的（不解释）</p>
 </blockquote>
 <p>1.它是分布式和高度可用的搜索引擎。</p>
@@ -509,7 +339,7 @@ wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.3.ta
 <pre><code>cd tools
 tar zxvf  elasticsearch-5.6.3.tar.gz 
 </code></pre><p>3、配置elasticsearch.yml文件</p>
-<p><img src="https://i.imgur.com/bcZrGHi.png" alt=""><br><img src="https://i.imgur.com/qZsnj7i.png" alt=""></p>
+<p><img src="https://i.imgur.com/bcZrGHi.png" alt><br><img src="https://i.imgur.com/qZsnj7i.png" alt></p>
 <p>修改配置文件</p>
 <p>进入到config中</p>
 <pre><code>vim elasticsearch.yml
@@ -558,18 +388,18 @@ elk    hard    nofile          65536
 <pre><code>#进入elasticsearch文件夹
 ./bin/elasticsearch
 </code></pre><p>显示如下界面</p>
-<p><img src="https://i.imgur.com/qmagLJA.png" alt=""></p>
+<p><img src="https://i.imgur.com/qmagLJA.png" alt></p>
 <p>这是因为不能用root账户启动elasticsearch，官方限制了应用的启动权限</p>
 <p>切换为elk用户</p>
 <pre><code>su elk
 #启动elasticsearch
 ./bin/elasticsearch
-</code></pre><p><img src="https://i.imgur.com/csoIaCd.png" alt=""></p>
+</code></pre><p><img src="https://i.imgur.com/csoIaCd.png" alt></p>
 <p>elasticsearch启动后会占用当前的命令行窗口<br>5、测试</p>
 <pre><code>curl http://192.168.80.134:9200
-</code></pre><p><img src="https://i.imgur.com/xNKOiVm.png" alt=""></p>
+</code></pre><p><img src="https://i.imgur.com/xNKOiVm.png" alt></p>
 <p>在浏览器中测试</p>
-<p><img src="https://i.imgur.com/0DcX73W.png" alt=""></p>
+<p><img src="https://i.imgur.com/0DcX73W.png" alt></p>
 <p>可以作为守护进程来启动</p>
 <pre><code>./bin/elasticsearch -d -p pid
 </code></pre><p>后面的-p pid会在当前目录中生成pid文件，里面记录了进程的IP。</p>
@@ -594,7 +424,7 @@ grunt server
 </code></pre><p>安装git命令</p>
 <p>2、安装node.js，由于head插件本质上还是一个nodejs工程，因此需要安装node，使用npm来安装以来的包</p>
 <p>去官网下载node.js:<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a></p>
-<p><img src="http://images2015.cnblogs.com/blog/449064/201611/449064-20161104145131580-1357516087.png" alt=""></p>
+<p><img src="http://images2015.cnblogs.com/blog/449064/201611/449064-20161104145131580-1357516087.png" alt></p>
 <p>下载的包是tar.xz格式的，解压到任意位置（记住此位置）</p>
 <pre><code>tar -xvf  xxxx.tar.xz
 </code></pre><p>在/etc/profile中添加环境变量</p>
@@ -668,109 +498,7 @@ server: {
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/22/ELK日志分析平台2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ELK日志分析平台" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/22/ELK日志分析平台/">ELK日志分析平台（1）-java环境搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/22/ELK日志分析平台/" class="archive-article-date">
-  	<time datetime="2017-10-22T03:11:47.772Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#第一部分 java环境搭建</p>
-<p>#一、在centos 7系统安装java环境</p>
-<p>###1.安装java1.0.8_151</p>
-<p>进入到/usr/local/目录</p>
-<pre><code>cd /usr/local/
-</code></pre><p>创建目录tools</p>
-<pre><code>mkdir -p tools、
-</code></pre><p>进入到目录tools中</p>
-<pre><code>cd tools
-</code></pre><p>下载java安装包</p>
-<pre><code>wget --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie;&quot; http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.tar.gz
-</code></pre><p>解压缩安装包</p>
-<pre><code>tar -xzf  jdk-8u151-linux-x64.tar.gz
-</code></pre><p><img src="https://i.imgur.com/P3F6iQY.png" alt=""></p>
-<p>解压完成</p>
-<p>返回上一级目录，并创建/usr/local/jdk目录</p>
-<pre><code>cd ..
-mkdir -p jdk
-</code></pre><p>进入tools目录，将下载的jdk移动到jdk目录中</p>
-<pre><code>cd ../tools/
-mv jdk1.8.0_151/ ../jdk/ 
-</code></pre><p>###2、设置系统环境变量<br>打开 /etc/ 目录下的 profile 文件</p>
-<pre><code>vi /etc/profile
-</code></pre><p>将如下代码追加到 profile 文件末尾：</p>
-<pre><code> # idea - jdk8 settings start 2017-10-20
-
-JAVA_HOME=/usr/local/jdk/jdk1.8.0_151
- JRE_HOME=$JAVA_HOME/jre
- PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
- CLASSPATH=:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib/dt.jar
- export JAVA_HOME JRE_HOME PATH CLASSPATH
-
-# idea - jdk8 settings end - 2017-10-20
-</code></pre><p><img src="https://i.imgur.com/4MWSBra.png" alt=""></p>
-<p>设置完成</p>
-<p>启用新的配置</p>
-<pre><code>source /etc/profile
-</code></pre><p><img src="https://i.imgur.com/qqCuu1X.png" alt=""></p>
-<p>测试完成！</p>
-<p>未完待续！—ELK日志分析平台（2）</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/22/ELK日志分析平台/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/03/24/ELK日志分析平台2/">展开全文 >></a>
         </p>
       
 
@@ -807,13 +535,13 @@ JAVA_HOME=/usr/local/jdk/jdk1.8.0_151
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/04/seafile搭建/">seafile搭建</a>
+      <a class="article-title" href="/2019/03/24/seafile搭建/">seafile搭建</a>
     </h1>
   
 
         
-        <a href="/2017/10/04/seafile搭建/" class="archive-article-date">
-  	<time datetime="2017-10-04T04:13:27.092Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-04</time>
+        <a href="/2019/03/24/seafile搭建/" class="archive-article-date">
+  	<time datetime="2019-03-24T03:00:12.490Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
 </a>
         
       </header>
@@ -871,7 +599,7 @@ pip install pillow moviepy
 </code></pre><p>在安装pip时会出现问题，解决方法如下：<br><a href="http://blog.csdn.net/yulei_qq/article/details/52984334" target="_blank" rel="noopener">CentOS7下安装python-pip</a></p>
 <p>####1.5 在安装seafile前先安装Mariadb-server<br>   安装命令</p>
 <pre><code>yum -y install mariadb mariadb-server
-</code></pre><p> <img src="https://i.imgur.com/UT01fOX.jpg" alt=""></p>
+</code></pre><p> <img src="https://i.imgur.com/UT01fOX.jpg" alt></p>
 <h5 id="注意：这需要一些时间下载文件"><a href="#注意：这需要一些时间下载文件" class="headerlink" title="注意：这需要一些时间下载文件"></a>注意：这需要一些时间下载文件</h5><p>安装完成Mariadb，启动Mariadb</p>
 <pre><code>systemctl start mariadb
 </code></pre><p>设置开机启动</p>
@@ -1051,7 +779,219 @@ pkill -f &quot;seahub&quot; # 结束 Seafile 进程
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/04/seafile搭建/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/03/24/seafile搭建/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ELK日志分析平台(4)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/24/ELK日志分析平台(4)/">ELK日志分析平台(4)-kibana安装与测试</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/24/ELK日志分析平台(4)/" class="archive-article-date">
+  	<time datetime="2019-03-24T03:00:12.478Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、下载安装包至/tools目录</p>
+<pre><code>wget https://artifacts.elastic.co/downloads/kibana/kibana-5.6.3-linux-x86_64.tar.gz
+</code></pre><p>2、解压至/elk目录</p>
+<pre><code>tar -zxvf kibana-5.6.3-linux-x86_64.tar.gz -C /elk
+</code></pre><p><img src="https://i.imgur.com/dkHW1ce.png" alt></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/24/ELK日志分析平台(4)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ELK日志分析平台简介" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/24/ELK日志分析平台简介/">ELK日志分析平台简介</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/24/ELK日志分析平台简介/" class="archive-article-date">
+  	<time datetime="2019-03-24T03:00:12.478Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#ELK多种架构及优劣</p>
+<p>ELK多种架构及优劣:<a href="http://blog.csdn.net/wenlixing110/article/details/56277603" target="_blank" rel="noopener">http://blog.csdn.net/wenlixing110/article/details/56277603</a></p>
+<ol>
+<li>需要给代码的用户一份Apache Licence</li>
+<li>如果你修改了代码，需要在被修改的文件中说明。</li>
+<li>在延伸的代码中（修改和有源代码衍生的代码中）需要带有原来代码中的协议，商标，专利声明和其他原来作者规定需要包含的说明。</li>
+<li>如果再发布的产品中包含一个Notice文件，则在Notice文件中需要带有Apache Licence。你可以在Notice中增加自己的许可，但不可以表现为对Apache Licence构成更改。</li>
+<li>Apache Licence也是对商业应用友好的许可。使用者也可以在需要的时候修改代码来满足需要并作为开源或商业产品发布/销售</li>
+</ol>
+<p>Apache License 2.0：<a href="http://blog.csdn.net/renminzdb/article/details/42422007" target="_blank" rel="noopener">http://blog.csdn.net/renminzdb/article/details/42422007</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/24/ELK日志分析平台简介/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ELK日志分析平台（3）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/24/ELK日志分析平台（3）/">ELK日志分析平台（3）-logstash安装测试</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/24/ELK日志分析平台（3）/" class="archive-article-date">
+  	<time datetime="2019-03-24T03:00:12.474Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、下载至根目录/tools安装包</p>
+<pre><code>wget https://artifacts.elastic.co/downloads/logstash/logstash-5.6.3.tar.gz
+</code></pre><p>2、解压至根目录下的elk文件夹</p>
+<pre><code>tar -zxvf logstash-5.6.3.tar.gz -C /elk
+</code></pre><p>3、进入logstash文件夹</p>
+<pre><code>cd logstash-5.6.3
+</code></pre><p>4、测试logstash</p>
+<p>启动一个logstash,-e：在命令行执行；input输入，stdin标准输入，是一个插件；output输出，stdout：标准输出</p>
+<pre><code>./bin/logstash -e &apos;input { stdin{} } output { stdout{codec=&gt;rubydebug} }&apos;
+</code></pre><p><img src="https://i.imgur.com/LpmBX9N.png" alt></p>
+<p>其中 hello 为手动输入</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/24/ELK日志分析平台（3）/">展开全文 >></a>
         </p>
       
 
@@ -1088,13 +1028,13 @@ pkill -f &quot;seahub&quot; # 结束 Seafile 进程
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/24/netflow/">Netflow下载与使用</a>
+      <a class="article-title" href="/2019/03/24/netflow/">Netflow下载与使用</a>
     </h1>
   
 
         
-        <a href="/2017/09/24/netflow/" class="archive-article-date">
-  	<time datetime="2017-09-24T10:16:12.966Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-24</time>
+        <a href="/2019/03/24/netflow/" class="archive-article-date">
+  	<time datetime="2019-03-24T03:00:12.474Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
 </a>
         
       </header>
@@ -1104,9 +1044,11 @@ pkill -f &quot;seahub&quot; # 结束 Seafile 进程
         <p><strong>1.Netflow介绍</strong></p>
 <blockquote>
 <p>&emsp;&emsp;<strong>NetFlow是一种数据交换方式，其工作原理是：NetFlow利用标准的交换模式处理数据流的第一个IP包数据，生成NetFlow 缓存，随后同样的数据基于缓存信息在同一个数据流中进行传输，不再匹配相关的访问控制等策略，NetFlow缓存同时包含了随后数据流的统计信息。</strong></p>
+</blockquote>
+<blockquote>
 <p>&emsp;&emsp;<strong>其次我们要关注的事netflow的产生：1996年，Cisco系统公司的Darren Kerr和Barry Bruins开发了一种流量轮廓监控技术，即NetFlow。<br>作为业界事实标准，NetFlow描述了路由器输出关于被路由套接字对（the routed socket pairs）统计信息的方法。目前Cisco的绝大多数路由器集成了该特性，Juniper、Extreme以及其他厂商也有集成该特性的路由器和交换机。NetFlow是Cisco发布的一款用于分析网络数据包信息的工具包。利用Netflow技术可以监测网络上的IP流（IP flow）信息。采集到的netflow流量信息可以帮助进行网络规划，网络管理，流量计费和病毒检测等等<br>注意：netflow是cisco开发并一直升级的，所以现在的netflow在思科的路由、交换器上是应用最广又或者是只有思科的路由器有这样的功能，只有极少数的路由有并且只是sflow的功能，像juniper。但是并不是所有思科的路由、交换器都有netflow功能，版本越高的路由器功能越全面，像c7200。版本较低的可能就没有，像c3630这个版本就不能配置netflow</strong></p>
 </blockquote>
-<p><strong>2.下载链接</strong><br>netflow下载地址<br><a href="http://www.manageengine.com/products/netflow/download.html#more_download" target="_blank" rel="noopener">http://www.manageengine.com/products/netflow/download.html#more_download</a><br><strong>3.安装Netflow的重点</strong><br>&emsp;&emsp;3.1 记好默认的端口号并选择语言，如下图所示<br>&emsp;<img src="https://i.imgur.com/FopVVwm.png" alt=""><br>&emsp;&emsp;3.2 记住默认的snmp端口<br><img src="https://i.imgur.com/BmmhpE8.png" alt=""><br>&emsp;&emsp;3.3 接着一路默认安装即可<br><strong>4.配置及检测数据</strong><br>CISC交换机c2801路由器配置netflow</p>
+<p><strong>2.下载链接</strong><br>netflow下载地址<br><a href="http://www.manageengine.com/products/netflow/download.html#more_download" target="_blank" rel="noopener">http://www.manageengine.com/products/netflow/download.html#more_download</a><br><strong>3.安装Netflow的重点</strong><br>&emsp;&emsp;3.1 记好默认的端口号并选择语言，如下图所示<br>&emsp;<img src="https://i.imgur.com/FopVVwm.png" alt><br>&emsp;&emsp;3.2 记住默认的snmp端口<br><img src="https://i.imgur.com/BmmhpE8.png" alt><br>&emsp;&emsp;3.3 接着一路默认安装即可<br><strong>4.配置及检测数据</strong><br>CISC交换机c2801路由器配置netflow</p>
 <p>###1.config全局模式下配置netflow版本号</p>
 <pre><code>(config)#ip flow-export version 5  
 </code></pre><p>###2.config全局模式下配置netflow服务器地址和端口号</p>
@@ -1141,7 +1083,76 @@ pkill -f &quot;seahub&quot; # 结束 Seafile 进程
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/24/netflow/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/03/24/netflow/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-nohup命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/24/nohup命令/">nohup 命令的简单使用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/24/nohup命令/" class="archive-article-date">
+  	<time datetime="2019-03-24T03:00:12.462Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>最近在搭建ELK平台，kibana是用tar包直接解压缩使用的方式安装的。但是安装完成后遇到一个问题就是如何让kibana后台运行，并且当断开ssh连接后，还能继续运行。后来在网上大神的博客中学到了nohup命令。</p>
+</blockquote>
+<p>我将这个命令用于后台启动elasticsearch的head插件后台运行，因为前台运行head插件和elasticsearch应用会占用当前的命令行窗口。</p>
+<pre><code>nohup grunt server &amp;exit
+</code></pre><p><img src="https://i.imgur.com/TVBbt8v.jpg" alt></p>
+<p>博客来源：<a href="http://blog.csdn.net/asia_kobe/article/details/53304447" target="_blank" rel="noopener">后台运行命令</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/24/nohup命令/">展开全文 >></a>
         </p>
       
 
@@ -1181,7 +1192,7 @@ pkill -f &quot;seahub&quot; # 结束 Seafile 进程
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 FLL
+    		&copy; 2019 FLL
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1268,7 +1279,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | Free Time</title>
+  <title>ELK日志分析平台（3）-logstash安装测试 | Free Time</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Free Time">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="1、下载至根目录/tools安装包 wget https://artifacts.elastic.co/downloads/logstash/logstash-5.6.3.tar.gz 2、解压至根目录下的elk文件夹 tar -zxvf logstash-5.6.3.tar.gz -C /elk 3、进入logstash文件夹 cd logstash-5.6.3 4、测试logstash 启动一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ELK日志分析平台（3）-logstash安装测试">
+<meta property="og:url" content="http://yoursite.com/2019/03/24/ELK日志分析平台（3）/index.html">
 <meta property="og:site_name" content="Free Time">
+<meta property="og:description" content="1、下载至根目录/tools安装包 wget https://artifacts.elastic.co/downloads/logstash/logstash-5.6.3.tar.gz 2、解压至根目录下的elk文件夹 tar -zxvf logstash-5.6.3.tar.gz -C /elk 3、进入logstash文件夹 cd logstash-5.6.3 4、测试logstash 启动一">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.imgur.com/LpmBX9N.png">
+<meta property="og:updated_time" content="2017-10-23T14:29:13.328Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Free Time">
+<meta name="twitter:title" content="ELK日志分析平台（3）-logstash安装测试">
+<meta name="twitter:description" content="1、下载至根目录/tools安装包 wget https://artifacts.elastic.co/downloads/logstash/logstash-5.6.3.tar.gz 2、解压至根目录下的elk文件夹 tar -zxvf logstash-5.6.3.tar.gz -C /elk 3、进入logstash文件夹 cd logstash-5.6.3 4、测试logstash 启动一">
+<meta name="twitter:image" content="https://i.imgur.com/LpmBX9N.png">
   
     <link rel="alternative" href="/atom.xml" title="Free Time" type="application/atom+xml">
   
@@ -154,238 +160,175 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-ELK日志分析平台（3）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ELK日志分析平台（3）-logstash安装测试
+    </h1>
+  
+
+        
+        <a href="/2019/03/24/ELK日志分析平台（3）/" class="archive-article-date">
+  	<time datetime="2019-03-24T03:00:12.474Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、下载至根目录/tools安装包</p>
+<pre><code>wget https://artifacts.elastic.co/downloads/logstash/logstash-5.6.3.tar.gz
+</code></pre><p>2、解压至根目录下的elk文件夹</p>
+<pre><code>tar -zxvf logstash-5.6.3.tar.gz -C /elk
+</code></pre><p>3、进入logstash文件夹</p>
+<pre><code>cd logstash-5.6.3
+</code></pre><p>4、测试logstash</p>
+<p>启动一个logstash,-e：在命令行执行；input输入，stdin标准输入，是一个插件；output输出，stdout：标准输出</p>
+<pre><code>./bin/logstash -e &apos;input { stdin{} } output { stdout{codec=&gt;rubydebug} }&apos;
+</code></pre><p><img src="https://i.imgur.com/LpmBX9N.png" alt></p>
+<p>其中 hello 为手动输入</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/26/ELK日志分析平台简介/" class="archive-article-date">
-  	<time datetime="2017-10-26T08:30:20.353Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/26/ELK日志分析平台简介/">ELK日志分析平台简介</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/24/ELK日志分析平台（3）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/25/nohup命令/" class="archive-article-date">
-  	<time datetime="2017-10-25T11:14:45.664Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-25</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/03/24/ELK日志分析平台简介/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ELK日志分析平台简介
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/24/netflow/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Netflow下载与使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/25/nohup命令/">nohup 命令的简单使用</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/23/ELK日志分析平台(4)/" class="archive-article-date">
-  	<time datetime="2017-10-23T14:33:26.243Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/23/ELK日志分析平台(4)/">ELK日志分析平台(4)-kibana安装与测试</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/23/ELK日志分析平台（3）/" class="archive-article-date">
-  	<time datetime="2017-10-23T14:26:20.345Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/23/ELK日志分析平台（3）/">ELK日志分析平台（3）-logstash安装测试</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/22/ELK日志分析平台2/" class="archive-article-date">
-  	<time datetime="2017-10-22T03:42:10.992Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/22/ELK日志分析平台2/">ELK日志分析平台（2）-elasticsearch安装与测试</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/22/ELK日志分析平台/" class="archive-article-date">
-  	<time datetime="2017-10-22T03:11:47.772Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/22/ELK日志分析平台/">ELK日志分析平台（1）-java环境搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/04/seafile搭建/" class="archive-article-date">
-  	<time datetime="2017-10-04T04:13:27.092Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/04/seafile搭建/">seafile搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/24/netflow/" class="archive-article-date">
-  	<time datetime="2017-09-24T10:16:12.966Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/24/netflow/">Netflow下载与使用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -408,8 +351,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
